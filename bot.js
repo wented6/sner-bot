@@ -371,6 +371,11 @@ client.on('message', function(message) {
 });
 
 
+client.on('guildMemberAdd', member=> {
+    member.addRole(member.guild.roles.find("name","Uni."));
+    });
+
+
 
 client.on('ready',async () => {
 console.log("Starting..");
